@@ -5,7 +5,7 @@ Evolution of [bootstrap-select-togglebutton](https://github.com/wpic/bootstrap-s
 Usage
 =====
 
-Create a select element and use the plugin.
+Create a select element and use the plugin, added compatiblity with [select2](https://github.com/select2/select2) jquery library.
 
 `$('select').togglebutton();`
 
@@ -22,6 +22,6 @@ I've added two option: **select2** and **button.active_class**:
     }
   }`
 
-**select2** add compatiblity with [select2](https://github.com/select2/select2) jquery library.
+**select2** true or false disable select2 element
 
 **button.active_class** specifies the css class of selected button instead to use the default class
