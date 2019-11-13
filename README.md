@@ -23,4 +23,5 @@ I've added two option: **select2** and **button.active_class**:
   }`
 
 **select2** add compatiblity with [select2](https://github.com/select2/select2) jquery library.
+
 **button.active_class** specifies the css class of selected button instead to use the default class
