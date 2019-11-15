@@ -36,10 +36,8 @@
       // select selected option.
       buttons.each(function (index, btn) {
         $(btn).click(function () {
-          // Retrieve all buttons siblings of the clicked one with an
-          // `active` class !
+          // Retrieve all buttons siblings of the clicked one with an `active` class !
           var activeBtn = $(btn).siblings(".active");
-          var total = [];
 
           // Remove all selected property on options.
           self.children("option:selected").prop("selected", false);
@@ -50,10 +48,6 @@
             $(btn).addClass(settings.button.active_class);
             // options.val(btn.value).prop("selected", true);
             options.removeAttr('selected');
-            options.filter(function () {
-              return this.value == btn.value;
-            }).attr('selected', true);
-            total.push(btn.value);
           }
 
           // If the select allow multiple values, remove all active
@@ -63,13 +57,8 @@
             activeBtn.removeClass(settings.button.active_class);
           }
 
-          // Push all active buttons value in an array.
-          activeBtn.each(function (index, btn) {
-            total.push(btn.value);
-          });
-
           // Change selected options of the select.
-          self.val(total).change();
+          self.val(btn.value).change();
         });
       });
 
@@ -80,10 +69,8 @@
       // Hide the display element.
       self.hide();
 
-      if (settings.select2) {
+      if (settings.select2)
         self_select2.hide();
-      }
-
     });
 
   };
